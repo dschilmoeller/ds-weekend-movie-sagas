@@ -15,6 +15,7 @@ function MovieList() {
         dispatch({ type: 'FETCH_MOVIES' });
     }, []);
 
+    // sends details of clicked item and moves to details page.
     const clickMovieDetail = (event) => {
         // console.log(`In movie detail, event:`, event.target.id);
         dispatch({ type: 'GET_MOVIE_DETAILS', payload: event.target.id })

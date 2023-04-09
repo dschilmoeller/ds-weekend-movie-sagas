@@ -19,6 +19,8 @@ function Details() {
 
     // display return - details w/ null show up at the bottom if not supplied. Going back does result
     // in details showing up at the bottom of the list. Needs to be wrapped in a link on app.js page?
+    // needed to be wrapped in Router. Completed. Deals with going back and forth by treating both pages
+    // as unique in classic HTML.
 
     if (movieName === 'NULL') {
         return (<></>)
