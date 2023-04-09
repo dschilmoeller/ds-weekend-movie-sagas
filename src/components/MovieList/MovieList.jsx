@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './MovieList.css'
+import Card from '@mui/material/Card';
 
 // important later
 import { useHistory } from 'react-router-dom';
@@ -24,16 +25,18 @@ function MovieList() {
 
     return (
         <main>
-            <h1>MovieList</h1>
+            <h1>Movie List</h1>
+            <h2>Click Post for Movie Details!</h2>
             <section className="movies">
                 {movies.map(movie => {
                     return (
+                        <Card sx={{ minWidth: 400 }}a>
                         <div key={movie.id} className='movieCard' >
                             <h3>{movie.title}</h3>
                             <img src={movie.poster} alt={movie.title} id={movie.id} onClick={clickMovieDetail} />
 
                         </div>
-
+                        </Card>
                     );
                 })}
 

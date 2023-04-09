@@ -27,7 +27,7 @@ function Details() {
     } else {
         return (
             <div>
-                <h1>Details for the Film: {movieName}</h1>
+                <h1>{movieName}</h1>
                 <img src={movieImage} />
                 <ul>
                     <li className="title3">Genres:</li>
